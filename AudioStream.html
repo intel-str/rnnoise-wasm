@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>WASM Rnnoise Denoise Demo</h1>
+
+    <button id="startRecordingButton">Start recording</button>
+    <button id="stopRecordingButton">Stop recording</button>
+    <label id="RecordingMessage"></label>
+    <br>
+    <br>
+    OR 
+    <br>
+    <br>
+    <input type=file accept="audio/*" capture id="file-input">
+    <br>
+    <br>
+    -----------------------------------------------------------------------------------------
+    <br>
+    <button id="playButtonR">Play recording</button>
+    <br>
+    <br>
+    <button id="playButtonD">Play denoised</button>
+    <br>
+    <br>
+    <h3>Wasm Performance</h3>
+    <label id=ProcessingMode></label>
+    <label id=SampleRate></label>
+    <label id=DataSize></label>
+    <label id=TimeIntervel></label>
+    <label id=Kbps></label>
+
+    <script async type="text/javascript" src ="rnn_denoise.js"></script>
+
+</body>
+</html>
