@@ -9,7 +9,7 @@ WebAssembly modules and HTML/JS glue code is provided. The web demo makes use of
 1. Python 2.7 or above on the local machine and Python executable in Env path.
 2. WebAudio and Wasm supported web-browser (preferrably Edge/Chrome/Firefox)
 
-##S teps
+## Steps
 1. Download / Clone contents of this repo to a local directory.
 2. Navigate to the directory containing AudioStream.html.
 3. Run `python -m SimpleHTTPServer` from a Terminal/Command prompt.
