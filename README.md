@@ -2,6 +2,12 @@
 A web based audio noise cancellation demo using WebAssembly translated from Xiph/Rnnoise, a recurrent neural netork based noise reduction library in C++.
 The C++ library and Wasm web-version accepts raw audio streams in Float32Arrays and applies denoising based on an included RNN model. Xiph/Rnnoise native has re training capabilities and option to provide custom models for de-noising. 
 
+The C++ source of the demo is included in 'Examples' directory. To modify 
+1. Replace contents of 'rnnoise/examples' with the code in 'Examples' directory. 
+2. Follow instructions from in the submodule to build Native demo.
+3. Use emscripten to build the Web demo.
+Example: `emcc -g -O3  -s ALLOW_MEMORY_GROWTH=1 -s EXPORT_ALL=1  -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' -I ../include/ ../src/*.c ../examples/*.c -o rnn_denoise.js`
+
 # Instructions to use the demo
 WebAssembly modules and HTML/JS glue code is provided. The web demo makes use of WebAudio for capturing audio stream through the browser and decoding WAV audio files. Browser support for WebAudio expected.
 
