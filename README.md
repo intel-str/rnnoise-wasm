@@ -30,3 +30,4 @@ To modify
 3. Use emscripten to build the Web demo.
 
 Example: `emcc -g -O3  -s ALLOW_MEMORY_GROWTH=1 -s EXPORT_ALL=1  -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' -I ../include/ ../src/*.c ../examples/*.c -o rnn_denoise.js`
+To optimize for worklets: `emcc -g -O3 -s BINARYEN_ASYNC_COMPILATION=0 -s SINGLE_FILE=1  -s ALLOW_MEMORY_GROWTH=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' -I ../include/ ../src/*.c ../examples/*.c --post-js denoise-worklet.js -o denoise-wasm-worklet.js`
